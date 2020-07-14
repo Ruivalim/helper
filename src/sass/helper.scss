@@ -1,0 +1,18 @@
+@import "variables", "extends";
+
+.clearfix::after {
+    @extend %clearfix;
+}
+
+.full{
+    width: 100%;
+
+    &::after {
+        @extend %clearfix;
+    }
+}
+
+.half{
+    width: 50%;
+    float: left;
+}

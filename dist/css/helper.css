@@ -1,0 +1,11 @@
+.clearfix::after, .full::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+.full {
+  width: 100%; }
+
+.half {
+  width: 50%;
+  float: left; }
