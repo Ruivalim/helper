@@ -5,6 +5,7 @@ const uglify = require('gulp-uglify-es').default;
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const pug = require('gulp-pug');
+const browserSync = require('browser-sync').create();
 
 sass.compiler = require('node-sass');
 
@@ -41,10 +42,21 @@ function pugCompiler(){
         .pipe(dest("dist/"))
 }
 
+function reloadPage(cb){
+    browserSync.reload();
+    cb();
+}
+
 const buildProcess = series(clear, parallel(javascriptCompiler, sassCompiler, pugCompiler))
 
 exports.watch = function(){
-    watch("src/**", buildProcess);
+    browserSync.init({
+        server: {
+            baseDir: "./dist"
+        }
+    });
+
+    watch("src/**", series(buildProcess, reloadPage));
 };
 
 exports.build = buildProcess;
