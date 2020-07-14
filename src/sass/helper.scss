@@ -1,18 +1,6 @@
-@import "variables", "extends";
-
-.clearfix::after {
-    @extend %clearfix;
-}
-
-.full{
-    width: 100%;
-
-    &::after {
-        @extend %clearfix;
-    }
-}
-
-.half{
-    width: 50%;
-    float: left;
-}
+@import "base";
+@import "variables";
+@import "extends";
+@import "usefull";
+@import "form";
+@import "menuHamburguer";

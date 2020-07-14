@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    &::before{
+        box-sizing: border-box;
+    }
+    &::after{
+        box-sizing: border-box;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p, figure, table{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+button{
+    background-color: transparent;
+    color: inherit;
+    border-width: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+ul, ol, dd{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}

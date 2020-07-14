@@ -1,0 +1,103 @@
+.input, .textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 2px;
+    border: none;
+    box-shadow: 0 0 2px $shadow-color;
+
+    &::placeholder {
+        color: $form-text-color;
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        color: $form-text-color;
+    }
+
+    &::-ms-input-placeholder {
+        color: $form-text-color;
+    }
+}
+
+.select {
+    width: 100%;
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 2px;
+    box-shadow: 0 0 2px $shadow-color;
+    transition: all .5s ease;
+    position: relative;
+    font-size: 14px;
+    color: #474747;
+    height: 100%;
+    text-align: left;
+
+    &:hover {
+        box-shadow: 0 0 4px rgb(204, 204, 204)
+    }
+
+    &:active {
+        background-color: #f8f8f8
+    }
+
+    &.active:hover,
+    &.active {
+        box-shadow: 0 0 4px $shadow-color;
+        border-radius: 2px 2px 0 0;
+        background-color: #f8f8f8
+    }
+
+    &.active .select-display > i {
+        transform: rotate(-90deg)
+    }
+
+    .select-display {
+        cursor: pointer;
+        display: block;
+        padding: 10px;
+    }
+    .select-display > i {
+        font-size: 13px;
+        color: #888;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        float: right;
+        line-height: 20px
+    }
+    .select-options {
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        left: 0;
+        margin-top: 1px;
+        box-shadow: 0 1px 2px $shadow-color;
+        border-radius: 0 1px 2px 2px;
+        overflow: hidden;
+        display: none;
+        overflow-y: auto;
+        z-index: 9;
+    }
+    .select-options li {
+        padding: 10px;
+        transition: all .2s ease-in-out;
+        cursor: pointer
+    } 
+    .select-options {
+        padding: 0;
+        list-style: none
+    }
+    .select-options li:hover {
+        background-color: #f2f2f2
+    }
+    .select-options li:active {
+        background-color: #e2e2e2
+    }
+    .select-options li.hidden{
+        display: none;
+    }
+    .select-options li input{
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 100%;
+    }
+}

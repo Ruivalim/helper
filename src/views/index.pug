@@ -6,6 +6,25 @@ html(lang="en")
         link(rel="stylesheet", href="css/helper.min.css")
         title Development Helper
     body
-        h1 Development Helper
+        div(class="select")
+            div(class="select-display")
+                span Select option
+                i(class="fa fa-chevron-left")
+            input(type="hidden" name="action")
+            ul(class="select-options")
+                li(class="searchBox")
+                    input(type="text")
+                li(value="option 1") Option 1
+                li(value="option 2") Option 2
+                li(value="option 2") Option 2
+                li(value="option 2") Option 2
+                li(value="option 2") Option 2
 
-        script(src="js/helper.min.hs")
+        div(class="menuHamburguer")
+            span
+            span
+            span
+            span    
+
+        script(src="https://code.jquery.com/jquery-3.5.1.min.js")
+        script(src="js/helper.min.js")
