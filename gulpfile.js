@@ -6,6 +6,7 @@ const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const pug = require('gulp-pug');
 const browserSync = require('browser-sync').create();
+const browserify = require('gulp-browserify');
 
 sass.compiler = require('node-sass');
 
@@ -17,6 +18,9 @@ function javascriptCompiler(){
     return src('src/js/*.js')
         .pipe(babel({
             presets: ['@babel/env']
+        }))
+        .pipe(browserify({
+            insertGlobals : true
         }))
         .pipe(dest('dist/js/'))
         .pipe(uglify())

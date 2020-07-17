@@ -1,3 +1,5 @@
+const $ = require("jquery");
+
 $(document).ready(function(){
     // Select initialize
     $('.select').click(function (e) {
