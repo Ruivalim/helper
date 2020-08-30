@@ -3,6 +3,9 @@ const $ = require("jquery");
 $(document).ready(function(){
     // Select initialize
     $('.select').click(function (e) {
+        if( $(this).hasClass("blocked") ){
+            return;
+        }
         if( !$(e.target).is("input") ){
             $(this).attr('tabindex', 1).focus();
             $(this).toggleClass('active');

@@ -12279,6 +12279,10 @@ var $ = require("jquery");
 $(document).ready(function () {
   // Select initialize
   $('.select').click(function (e) {
+    if ($(this).hasClass("blocked")) {
+      return;
+    }
+
     if (!$(e.target).is("input")) {
       $(this).attr('tabindex', 1).focus();
       $(this).toggleClass('active');
@@ -12309,5 +12313,5 @@ $(document).ready(function () {
     $(this).toggleClass("open");
   });
 });
-}).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_f8299602.js","/")
+}).call(this,require("Wb8Gej"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_b9b751a0.js","/")
 },{"Wb8Gej":2,"buffer":3,"jquery":5}]},{},[6])

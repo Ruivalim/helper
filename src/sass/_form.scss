@@ -32,6 +32,11 @@
     height: 100%;
     text-align: left;
 
+    &.blocked{
+        background: lightgrey;
+        cursor: no-drop;
+    }
+
     &:hover {
         box-shadow: 0 0 4px rgb(204, 204, 204)
     }
@@ -76,6 +81,7 @@
         display: none;
         overflow-y: auto;
         z-index: 9;
+        max-height: 350px;
     }
     .select-options li {
         padding: 10px;

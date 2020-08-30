@@ -118,6 +118,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   color: #474747;
   height: 100%;
   text-align: left; }
+  .select.blocked {
+    background: lightgrey;
+    cursor: no-drop; }
   .select:hover {
     box-shadow: 0 0 4px #cccccc; }
   .select:active {
@@ -150,7 +153,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     overflow: hidden;
     display: none;
     overflow-y: auto;
-    z-index: 9; }
+    z-index: 9;
+    max-height: 350px; }
   .select .select-options li {
     padding: 10px;
     transition: all .2s ease-in-out;
